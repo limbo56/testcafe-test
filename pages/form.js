@@ -22,10 +22,10 @@ export default function Form() {
     // Prevent default form action
     event.preventDefault();
 
-    // Check for missing required fields
+    // Check for empty fields
     let missing = resolveEmptyFields(event.target);
     if (missing.length > 0) {
-      setError("Missing required field(s): " + missing.join(", "));
+      setError("Empty field(s): " + missing.join(", "));
       return;
     } else {
       setError(null);
@@ -35,10 +35,10 @@ export default function Form() {
     const data = new FormData(event.target);
     const jsonData = Object.fromEntries(data);
 
-    // Print data to console as a table
+    // Print data to console
     console.log("Form data: " + JSON.stringify(jsonData));
 
-    // Post the data to a non-existent API endpoint
+    // Post the data to a mock API endpoint
     fetch("/test", {
       method: "POST",
       headers: {

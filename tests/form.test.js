@@ -32,7 +32,7 @@ test("Assert form error box exists", async (t) => {
   await t
     .click(submitButton)
     .expect(Selector("#error-box").innerText)
-    .eql("Missing required field(s): firstName, lastName");
+    .eql("Empty field(s): firstName, lastName");
 });
 
 test("Assert form error box doesn't exist", async (t) => {
