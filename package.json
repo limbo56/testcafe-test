@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "test": "yarn testcafe 'chrome:headless' ./tests/"
   },
   "dependencies": {
     "next": "11.0.1",
@@ -15,6 +16,8 @@
   },
   "devDependencies": {
     "eslint": "7.31.0",
-    "eslint-config-next": "11.0.1"
+    "eslint-config-next": "11.0.1",
+    "testcafe": "^1.15.0",
+    "testcafe-browser-provider-browserstack": "^1.13.2-alpha.1"
   }
 }
