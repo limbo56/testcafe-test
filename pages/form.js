@@ -1,5 +1,5 @@
-import Head from "next/head";
 import { useState } from "react";
+import Head from "next/head";
 import styles from "../styles/Form.module.css";
 
 function resolveEmptyFields(form) {
@@ -57,12 +57,12 @@ export default function Form() {
       <main>
         <h1>Sample Form</h1>
         <form id="name-form" onSubmit={handleSubmit}>
-          <div className="inputField">
+          <div>
             <label htmlFor="firstName">First Name</label>
             <input id="firstName" name="firstName" type="text" />
           </div>
 
-          <div className="inputField">
+          <div>
             <label htmlFor="lastName">Last Name</label>
             <input id="lastName" name="lastName" type="text" />
           </div>
